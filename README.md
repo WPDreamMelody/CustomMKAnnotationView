@@ -37,9 +37,6 @@ example：
 }
 
 
-#pragma mark -
-#pragma mark delegate
-
 - (NSInteger)numbersWithCalloutViewForMapView
 {
     return 0;
