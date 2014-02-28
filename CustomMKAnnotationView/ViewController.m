@@ -56,7 +56,7 @@
 
 - (NSInteger)numbersWithCalloutViewForMapView
 {
-    return 0;
+    return _annotations.count;
 }
 
 - (CLLocationCoordinate2D)coordinateForMapViewWithIndex:(NSInteger)index
