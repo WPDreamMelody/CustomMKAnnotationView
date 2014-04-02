@@ -127,9 +127,11 @@
         if (!annotationView)
         {
             annotationView = [[CallOutAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CalloutView" delegate:self];
-            
-            [annotationView.contentView addSubview:[_delegate mapViewCalloutContentViewWithIndex:calloutAnnotation.tag]];
         }
+        for (UIView *view in  annotationView.contentView.subviews) {
+            [view removeFromSuperview];
+        }
+        [annotationView.contentView addSubview:[_delegate mapViewCalloutContentViewWithIndex:calloutAnnotation.tag]];
         return annotationView;
 	} else if ([annotation isKindOfClass:[BasicMapAnnotation class]])
     {
